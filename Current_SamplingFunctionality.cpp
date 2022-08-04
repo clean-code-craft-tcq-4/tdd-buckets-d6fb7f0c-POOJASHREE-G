@@ -4,7 +4,7 @@
 using namespace std;
 
 
-unsigned int ConsecutiveRanges(int *Current_Samples) {
+unsigned int ConsecutiveRanges(int Current_Samples[]) {
 
     int Current_Samples_arr_size = sizeof(Current_Samples);
     unsigned int count = 1;
@@ -23,7 +23,7 @@ unsigned int ConsecutiveRanges(int *Current_Samples) {
     return count;
 }
 
-bool SampleRangeReadings(int *Current_Samples, unsigned int ReadingsCount)
+bool SampleRangeReadings(int Current_Samples[], int ReadingsCount)
 {
     unsigned int GetReadingsCount = ConsecutiveRanges(Current_Samples);
 
