@@ -9,7 +9,7 @@ unsigned int ConsecutiveRanges(int Current_Samples[]) {
     const int Current_Samples_arr_size = sizeof(Current_Samples)/sizeof(Current_Samples[0]);
     unsigned int count = 1;
     int idx; // index
-
+    cout << "Current_Samples_arr_size =" << Current_Samples_arr_size << endl;
     // check if the current element & previous element step is 1.
     for(idx=0; idx < Current_Samples_arr_size; idx++) {
         
