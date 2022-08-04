@@ -25,8 +25,6 @@ bool SampleRangeReadings(int Current_Samples[], int ReadingsCount)
 {
     unsigned int GetReadingsCount = ConsecutiveRanges(Current_Samples);
 
-    cout << "got count of " << GetReadingsCount << endl;
-
     if(GetReadingsCount == ReadingsCount)
     {
         return true;
