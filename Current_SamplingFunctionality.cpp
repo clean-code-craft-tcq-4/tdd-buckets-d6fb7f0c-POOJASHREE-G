@@ -11,11 +11,11 @@ unsigned int ConsecutiveRanges(int Current_Samples[]) {
     int idx; // index
 
     // check if the current element & previous element step is 1.
-    for(idx=1; idx < Current_Samples_arr_size; idx++) {
+    for(idx=0; idx < Current_Samples_arr_size; idx++) {
         
         cout << "Current_Samples[idx] " << Current_Samples[idx] << endl;
         cout << "Current_Samples[idx - 1] " << Current_Samples[idx - 1] << endl;
-        if ((Current_Samples[idx] - Current_Samples[idx - 1]) == 1 ) {
+        if ((Current_Samples[idx + 1] - Current_Samples[idx]) == 1 ) {
             count = count + 1;
             cout << "Incremented " << endl;
         }
