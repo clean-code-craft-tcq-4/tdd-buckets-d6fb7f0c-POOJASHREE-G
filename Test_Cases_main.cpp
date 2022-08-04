@@ -11,10 +11,10 @@ int main() {
     int Current_Samples_3 [] = { 1, 4, 6, 7, 8, 10 };
 
     // Passing Test Case
-    //assert(SampleRangeReadings(Current_Samples_1, 2) == true);
+    assert(SampleRangeReadings(Current_Samples_1, 2) == true);
 
     // Passing Test Case 
-    //assert(SampleRangeReadings(Current_Samples_2, 2) == true);
+    assert(SampleRangeReadings(Current_Samples_2, 2) == true);
 
     // Failing Test Case
     assert(SampleRangeReadings(Current_Samples_3, 3) == true);
