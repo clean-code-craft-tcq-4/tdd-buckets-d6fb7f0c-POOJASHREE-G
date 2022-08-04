@@ -6,7 +6,7 @@ using namespace std;
 
 unsigned int ConsecutiveRanges(int Current_Samples[]) {
 
-    const int Current_Samples_arr_size = sizeof(Current_Samples)/sizeof(Current_Samples[0]);
+    int Current_Samples_arr_size = sizeof(Current_Samples)/sizeof(Current_Samples[0]);
     unsigned int count = 1;
     int idx; // index
     cout << "sizeof(Current_Samples) =" << sizeof(Current_Samples) << endl;
