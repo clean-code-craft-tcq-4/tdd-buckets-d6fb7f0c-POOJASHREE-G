@@ -26,7 +26,7 @@ unsigned int ConsecutiveRanges(int Current_Samples[]) {
 
 bool SampleRangeReadings(int Current_Samples[], unsigned int ReadingsCount)
 {
-    unsigned int GetReadingsCount = consecutiveRanges(Current_Samples);
+    unsigned int GetReadingsCount = ConsecutiveRanges(Current_Samples);
 
     if(GetReadingsCount == ReadingsCount)
     {
