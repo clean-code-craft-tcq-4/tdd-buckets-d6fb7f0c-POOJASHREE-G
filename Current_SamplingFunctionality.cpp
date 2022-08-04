@@ -10,8 +10,7 @@ unsigned int ConsecutiveRanges(int Current_Samples[]) {
     unsigned int count = 1;
     int idx = 1; // index
 
-    // check if the current element is equal to
-    // previous element.
+    // check if the current element & previous element step is 1.
     for(idx=0; idx < Current_Samples_arr_size; idx++) {
 
         if ((Current_Samples[idx] - Current_Samples[idx - 1]) == 1 ) {
@@ -32,8 +31,11 @@ bool SampleRangeReadings(int Current_Samples[], int ReadingsCount)
     {
         return true;
     }
+    else
+    {
+        return false;
+    }
 
-    return false;
 }
 
 
