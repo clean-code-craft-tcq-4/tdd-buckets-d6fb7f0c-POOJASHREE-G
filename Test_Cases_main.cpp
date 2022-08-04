@@ -8,16 +8,19 @@ using namespace std;
 
 // As a first step, only considering to detect continuous ranges in the samples
 TEST_CASE("PASSING TEST CASE 1") {
-    int Current_Samples_1 [] = { 4, 5 };
-    REQUIRE(SampleRangeReadings(Current_Samples_1, 2) == true);
+    int Current_Samples [] = { 4, 5 };
+    int Current_Samples_size = sizeof(Current_Samples)/sizeof(Current_Samples[0]);
+    REQUIRE(SampleRangeReadings(Current_Samples, Current_Samples_size, 2) == true);
 }
 
 TEST_CASE("PASSING TEST CASE 2") {
-    int Current_Samples_2 [] = { 4, 5, 10 };
-    REQUIRE(SampleRangeReadings(Current_Samples_2, 2) == true);
+    int Current_Samples [] = { 4, 5, 10 };
+    int Current_Samples_size = sizeof(Current_Samples)/sizeof(Current_Samples[0]);
+    REQUIRE(SampleRangeReadings(Current_Samples, Current_Samples_size, 2) == true);
 }
 
 TEST_CASE("PASSING TEST CASE 3") {
-    int Current_Samples_3 [] = { 1, 4, 6, 7, 8, 10 };
-    REQUIRE(SampleRangeReadings(Current_Samples_3, 3) == true);
+    int Current_Samples [] = { 1, 4, 6, 7, 8, 10 };
+    int Current_Samples_size = sizeof(Current_Samples)/sizeof(Current_Samples[0]);
+    REQUIRE(SampleRangeReadings(Current_Samples, Current_Samples_size, 3) == true);
 }

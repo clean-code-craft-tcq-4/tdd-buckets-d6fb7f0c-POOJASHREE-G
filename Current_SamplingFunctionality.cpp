@@ -4,16 +4,16 @@
 using namespace std;
 
 
-unsigned int ConsecutiveRanges(int Current_Samples[]) {
+unsigned int ConsecutiveRanges(int Current_Samples[], int Current_Samples_size) {
 
-    int Current_Samples_arr_size = sizeof(Current_Samples)/sizeof(Current_Samples[0]);
+    //int Current_Samples_arr_size = sizeof(Current_Samples)/sizeof(Current_Samples[0]);
     unsigned int count = 1;
     int idx; // index
     cout << "sizeof(Current_Samples) =" << sizeof(Current_Samples) << endl;
     cout << "sizeof(Current_Samples[0] =" << sizeof(Current_Samples[0]) << endl;
-    cout << "Current_Samples_arr_size =" << Current_Samples_arr_size << endl;
+    cout << "Current_Samples_arr_size =" << Current_Samples_size << endl;
     // check if the current element & previous element step is 1.
-    for(idx=0; idx < Current_Samples_arr_size; idx++) {
+    for(idx=0; idx < Current_Samples_size; idx++) {
         
         cout << "Current_Samples[idx +1] " << Current_Samples[idx +1] << endl;
         cout << "Current_Samples[idx ] " << Current_Samples[idx] << endl;
@@ -26,9 +26,9 @@ unsigned int ConsecutiveRanges(int Current_Samples[]) {
     return count;
 }
 
-bool SampleRangeReadings(int Current_Samples[], int ReadingsCount)
+bool SampleRangeReadings(int Current_Samples[], int Current_Samples_size, int ReadingsCount)
 {
-    unsigned int GetReadingsCount = ConsecutiveRanges(Current_Samples);
+    unsigned int GetReadingsCount = ConsecutiveRanges(Current_Samples, Current_Samples_size);
 
     cout << "got count of " << GetReadingsCount << endl;
 
