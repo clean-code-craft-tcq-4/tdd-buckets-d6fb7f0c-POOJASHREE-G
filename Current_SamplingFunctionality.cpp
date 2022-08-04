@@ -8,7 +8,7 @@ unsigned int ConsecutiveRanges(int Current_Samples[]) {
 
     const int Current_Samples_arr_size = sizeof(Current_Samples)/sizeof(Current_Samples[0]);
 
-    unsigned int count = 0;
+    unsigned int count = 1;
     int idx = 1; // index
 
     while (idx < Current_Samples_arr_size) {
