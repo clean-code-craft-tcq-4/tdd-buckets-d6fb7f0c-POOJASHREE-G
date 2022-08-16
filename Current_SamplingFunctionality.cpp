@@ -6,31 +6,17 @@ using namespace std;
 
 unsigned int ConsecutiveRanges(int Current_Samples[], int Current_Samples_size) {
 
-    unsigned int count = 1;
-    int idx; // index
-    // check if the current element & previous element step is 1.
-    for(idx=0; idx < Current_Samples_size; idx++) {
+    unsigned int Step_count = 1;
+    int index;
 
-        if ((Current_Samples[idx + 1] - Current_Samples[idx]) == 1 ) {
-            count = count + 1;
+    // check if the current element & previous element step is 1.
+    for(index=0; index < Current_Samples_size; index++) {
+
+        if ((Current_Samples[index + 1] - Current_Samples[index]) == 1 ) {
+            Step_count = Step_count + 1;
         }
     }
-    return count;
-}
-
-bool SampleRangeReadings(int Current_Samples[], int Current_Samples_size, int ReadingsCount)
-{
-    unsigned int GetReadingsCount = ConsecutiveRanges(Current_Samples, Current_Samples_size);
-
-    if(GetReadingsCount == ReadingsCount)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
-
+    return Step_count;
 }
 
 

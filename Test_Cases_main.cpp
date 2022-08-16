@@ -5,7 +5,6 @@
 #include "Current_SamplingFunctionality.hpp"
 using namespace std;
 
-
 // As a first step, only considering to detect continuous ranges in the samples
 TEST_CASE("PASSING TEST CASE 1") {
     int Current_Samples [] = { 4, 5 };
