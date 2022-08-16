@@ -3,6 +3,7 @@
 #include "test/catch.hpp"
 #include <iostream>
 #include "Current_SamplingFunctionality.hpp"
+#include "Test_Cases_main.hpp"
 using namespace std;
 
 // As a first step, only considering to detect continuous ranges in the samples
