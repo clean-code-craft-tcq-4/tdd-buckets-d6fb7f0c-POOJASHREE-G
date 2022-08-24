@@ -34,9 +34,9 @@ void DetectRangeReadings(unsigned int f_Current_Samples[], int f_Current_Samples
     {
         g_SampledReadings_arr[f_Current_Samples[index]]++;
 
-        if(g_SampledReadings_arr[i]!=0)
+        if(g_SampledReadings_arr[index]!=0)
         {
-            SampleReadingIndex[i] = i;
+            SampleReadingIndex[index] = index;
         }
     }
 
