@@ -6,9 +6,8 @@
 #include "Current_SamplingFunctionality.hpp"
 using namespace std;
 
-unsigned int g_SampledReadings_arr[100];
+int g_SampledReadings_arr[100];
 const int g_SampledReadings_arr_size = sizeof(g_SampledReadings_arr)/sizeof(g_SampledReadings_arr[0]);
-int SampleReadingCount[g_SampledReadings_arr_size];
 int SampleReadingIndex[g_SampledReadings_arr_size];
 
 unsigned int ConsecutiveRanges(unsigned int Current_Samples[], int Current_Samples_size) {
@@ -40,7 +39,6 @@ void DetectRangeReadings(unsigned int f_Current_Samples[], int f_Current_Samples
     {
         if(g_SampledReadings_arr[i]!=0)
         {
-            SampleReadingCount[i] = g_SampledReadings_arr[i];
             SampleReadingIndex[i] = i;
         }
     }
@@ -48,11 +46,6 @@ void DetectRangeReadings(unsigned int f_Current_Samples[], int f_Current_Samples
     for(int i = 0; i < g_SampledReadings_arr_size; ++i)
     {
         cout << g_SampledReadings_arr[i] << " ";
-    }
-    cout << endl;
-    for(int i = 0; i < g_SampledReadings_arr_size; ++i)
-    {
-        cout << SampleReadingCount[i] << " ";
     }
     cout << endl;
     for(int i = 0; i < g_SampledReadings_arr_size; ++i)
@@ -66,7 +59,7 @@ string GetConsecutiveRange(unsigned int f_Current_Samples[], int f_Current_Sampl
 {
     string PassDetectedRanges;
     DetectRangeReadings(f_Current_Samples, f_Current_Samples_size);
-    vector<string> GetDetectedRanges = CheckconsecutiveRanges(SampleReadingIndex, SampleReadingCount, g_SampledReadings_arr_size);
+    vector<string> GetDetectedRanges = CheckconsecutiveRanges(SampleReadingIndex, g_SampledReadings_arr, g_SampledReadings_arr_size);
 
     for( size_t i = 0; i < GetDetectedRanges.size(); ++i ) {
         PassDetectedRanges += GetDetectedRanges[i];
@@ -79,7 +72,7 @@ string GetConsecutiveRange(unsigned int f_Current_Samples[], int f_Current_Sampl
 }
 
 
-vector<string> CheckconsecutiveRanges(int f_SampleReadingIndex[],int f_SampleReadingCount[], int f_SampledReadings_arr_size)
+vector<string> CheckconsecutiveRanges(int f_SampleReadingIndex[],int f_SampledReadings[], int f_SampledReadings_arr_size)
 {
     int Readings =0;
     int LastValue = 1;
@@ -103,7 +96,7 @@ vector<string> CheckconsecutiveRanges(int f_SampleReadingIndex[],int f_SampleRea
             {
                 for(int j=i - LastValue;j<=i - 1;j++)
                 {
-                    Readings = Readings+ f_SampleReadingCount[j];
+                    Readings = Readings+ f_SampledReadings[j];
                 }
                 string temp = to_string(f_SampleReadingIndex[i - LastValue]) +
                             " -> " + to_string(f_SampleReadingIndex[i - 1]) + " , Reading:" + to_string(Readings);
