@@ -1,7 +1,7 @@
 #ifndef CURRENT_SAMPLING_FUNCTIONALITY_HPP
 #define CURRENT_SAMPLING_FUNCTIONALITY_HPP
 #include <iostream>
-#include <string>
+#include <cstring>
 #include <unordered_map>
 #include <cstdlib>
 #include <vector>
