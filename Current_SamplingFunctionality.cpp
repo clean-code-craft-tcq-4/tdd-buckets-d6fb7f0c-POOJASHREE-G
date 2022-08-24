@@ -48,7 +48,13 @@ void DetectRangeReadings(unsigned int f_Current_Samples[], int f_Current_Samples
     for(int i = 0; i < g_SampledReadings_arr_size; ++i)
     {
         cout << g_SampledReadings_arr[i] << endl;
+    }
+    for(int i = 0; i < g_SampledReadings_arr_size; ++i)
+    {
         cout << SampleReadingCount[i] << endl;
+    }
+        for(int i = 0; i < g_SampledReadings_arr_size; ++i)
+    {
         cout << SampleReadingIndex[i] << endl;
     }
 }
