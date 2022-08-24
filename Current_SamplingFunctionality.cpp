@@ -33,15 +33,13 @@ void DetectRangeReadings(unsigned int f_Current_Samples[], int f_Current_Samples
     for(int index = 0; index < f_Current_Samples_size; index++)
     {
         g_SampledReadings_arr[f_Current_Samples[index]]++;
-    }
 
-    for(int i = 0; i < g_SampledReadings_arr_size; ++i)
-    {
         if(g_SampledReadings_arr[i]!=0)
         {
             SampleReadingIndex[i] = i;
         }
     }
+
 }
 
 string GetConsecutiveRange(unsigned int f_Current_Samples[], int f_Current_Samples_size)
