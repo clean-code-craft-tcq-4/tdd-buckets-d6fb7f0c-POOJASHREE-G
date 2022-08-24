@@ -71,18 +71,15 @@ vector<string> CheckconsecutiveRanges(int f_SampleReadingIndex[],int f_SampledRe
     {
         if (i == f_SampledReadings_arr_size || f_SampleReadingIndex[i] - f_SampleReadingIndex[i - 1] != 1)
         {
+            for(int j=i - LastValue;j<=i - 1;j++)
             {
-                for(int j=i - LastValue;j<=i - 1;j++)
-                {
-                    Readings = Readings+ f_SampledReadings[j];
-                }
-                string temp = to_string(f_SampleReadingIndex[i - LastValue]) +
-                            " -> " + to_string(f_SampleReadingIndex[i - 1]) + " , Reading:" + to_string(Readings);
-
-                DetectedRange.push_back(temp);
+                Readings = Readings+ f_SampledReadings[j];
             }
+            string temp = to_string(f_SampleReadingIndex[i - LastValue]) +
+                        " -> " + to_string(f_SampleReadingIndex[i - 1]) + " , Reading:" + to_string(Readings);
 
-            Readings =0;
+            DetectedRange.push_back(temp);
+
         }
 
     }
