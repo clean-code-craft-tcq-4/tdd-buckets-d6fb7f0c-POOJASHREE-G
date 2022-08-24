@@ -67,21 +67,10 @@ vector<string> CheckconsecutiveRanges(int f_SampleReadingIndex[],int f_SampledRe
     int LastValue = 1;
     vector<string> DetectedRange;
 
-    if (f_SampledReadings_arr_size == 0)
-    {
-        return DetectedRange;
-    }
-
     for(int i = 1; i <= f_SampledReadings_arr_size; i++)
     {
-
         if (i == f_SampledReadings_arr_size || f_SampleReadingIndex[i] - f_SampleReadingIndex[i - 1] != 1)
         {
-            if (LastValue == 1)
-            {
-                //DetectedRange.push_back(to_string(a[i - length]));
-            }
-            else
             {
                 for(int j=i - LastValue;j<=i - 1;j++)
                 {
@@ -93,13 +82,9 @@ vector<string> CheckconsecutiveRanges(int f_SampleReadingIndex[],int f_SampledRe
                 DetectedRange.push_back(temp);
             }
 
-            LastValue = 1;
             Readings =0;
         }
-        else
-        {
-            LastValue++;
-        }
+
     }
 
     return DetectedRange;
