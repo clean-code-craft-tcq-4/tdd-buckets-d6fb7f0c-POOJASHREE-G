@@ -47,16 +47,19 @@ void DetectRangeReadings(unsigned int f_Current_Samples[], int f_Current_Samples
 
     for(int i = 0; i < g_SampledReadings_arr_size; ++i)
     {
-        cout << g_SampledReadings_arr[i] << endl;
+        cout << g_SampledReadings_arr[i];
     }
+    cout << endl;
     for(int i = 0; i < g_SampledReadings_arr_size; ++i)
     {
-        cout << SampleReadingCount[i] << endl;
+        cout << SampleReadingCount[i];
     }
-        for(int i = 0; i < g_SampledReadings_arr_size; ++i)
+    cout << endl;
+    for(int i = 0; i < g_SampledReadings_arr_size; ++i)
     {
-        cout << SampleReadingIndex[i] << endl;
+        cout << SampleReadingIndex[i];
     }
+    cout << endl;
 }
 
 string GetConsecutiveRange(unsigned int f_Current_Samples[], int f_Current_Samples_size)
