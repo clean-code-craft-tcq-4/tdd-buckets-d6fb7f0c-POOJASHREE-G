@@ -52,7 +52,7 @@ string GetConsecutiveRange(unsigned int f_Current_Samples[], int f_Current_Sampl
 
     for( size_t i = 0; i < GetDetectedRanges.size(); ++i ) {
         PassDetectedRanges += GetDetectedRanges[i];
-        PassDetectedRanges += ", ";
+        PassDetectedRanges += " ,";
     }
 
     PassDetectedRanges.pop_back();
