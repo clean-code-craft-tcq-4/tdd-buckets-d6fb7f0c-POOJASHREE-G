@@ -4,6 +4,7 @@
 #include <string>
 #include <unordered_map>
 #include <cstdlib>
+#include <vector>
 using namespace std;
 
 unsigned int ConsecutiveRanges(unsigned int Current_Samples[], int Current_Samples_size);

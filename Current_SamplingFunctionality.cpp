@@ -2,6 +2,7 @@
 #include <string>
 #include <unordered_map>
 #include <cstdlib>
+#include <vector>
 #include "Current_SamplingFunctionality.hpp"
 using namespace std;
 
