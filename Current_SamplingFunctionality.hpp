@@ -15,9 +15,5 @@ vector<string> CheckconsecutiveRanges(int f_SampleReadingIndex[],int f_SampleRea
 
 string GetConsecutiveRange(unsigned int f_Current_Samples[], int f_Current_Samples_size);
 
-unsigned int g_SampledReadings_arr[100] = {0};
-const int g_SampledReadings_arr_size = sizeof(g_SampledReadings_arr)/sizeof(g_SampledReadings_arr[0]);
-int SampleReadingCount[g_SampledReadings_arr_size] = {0};
-int SampleReadingIndex[g_SampledReadings_arr_size] = {0};
 
 #endif

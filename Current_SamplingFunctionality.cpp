@@ -6,6 +6,10 @@
 #include "Current_SamplingFunctionality.hpp"
 using namespace std;
 
+unsigned int g_SampledReadings_arr[100];
+const int g_SampledReadings_arr_size = sizeof(g_SampledReadings_arr)/sizeof(g_SampledReadings_arr[0]);
+int SampleReadingCount[g_SampledReadings_arr_size];
+int SampleReadingIndex[g_SampledReadings_arr_size];
 
 unsigned int ConsecutiveRanges(unsigned int Current_Samples[], int Current_Samples_size) {
 
