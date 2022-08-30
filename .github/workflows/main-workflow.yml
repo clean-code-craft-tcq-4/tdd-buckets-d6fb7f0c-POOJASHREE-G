@@ -16,7 +16,7 @@ jobs:
         sudo apt-get install -y gcovr
 
     - name: build
-      run: g++ -Wall -Wextra -fprofile-arcs -ftest-coverage -o testchecker Current_SamplingFunctionality.cpp Test_Cases_main.cpp Test_functions.cpp
+      run: g++ -Wall -Wextra -fprofile-arcs -ftest-coverage -o testchecker Current_SamplingFunctionality.cpp Test_Cases_main.cpp Test_functions.cpp ADC_To_AmpConverter.cpp
 
     - name: run
       run: ./testchecker
