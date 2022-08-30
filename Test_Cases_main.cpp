@@ -4,6 +4,7 @@
 #include <iostream>
 #include "Current_SamplingFunctionality.hpp"
 #include "Test_Cases_main.hpp"
+#include "ADC_To_AmpConverter.hpp"
 using namespace std;
 
 // As a first step, only considering to detect continuous ranges in the samples
@@ -48,4 +49,9 @@ TEST_CASE("PASSING TEST CASE 3 ( CONSECUTIVE RANGES )") {
     unsigned int Current_Samples [] = { 4, 4, 5, 6, 7, 8, 8, 10, 11, 12, 12 };
     int Current_Samples_size = sizeof(Current_Samples)/sizeof(Current_Samples[0]);
     REQUIRE(GetConsecutiveRange(Current_Samples, Current_Samples_size) == ("3 -> 8 , Reading:7 ,10 -> 12 , Reading:4 "));
+}
+
+TEST_CASE("ADC Converter check") {
+
+    REQUIRE(ADCToAmpereConverter(1146) == (2.799));
 }
