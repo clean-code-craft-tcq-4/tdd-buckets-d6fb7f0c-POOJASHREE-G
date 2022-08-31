@@ -5,6 +5,6 @@ using namespace std;
 
 float ADCToAmpereConverter(int f_InputADC_Data) {
 
-    return ((CONVERSION_SCALE * f_InputADC_Data) / (MAXIMUM_OFFSET)) + (CONVERSION_OFFSET);
+    return ((float)(CONVERSION_SCALE * f_InputADC_Data) / (float)(MAXIMUM_OFFSET)) + (float)(CONVERSION_OFFSET);
 
 }
