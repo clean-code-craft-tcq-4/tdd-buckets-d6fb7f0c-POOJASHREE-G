@@ -52,6 +52,5 @@ TEST_CASE("PASSING TEST CASE 3 ( CONSECUTIVE RANGES )") {
 }
 
 TEST_CASE("ADC Converter check") {
-
     REQUIRE(ADCToAmpereConverter(1146) == (2.799));
 }

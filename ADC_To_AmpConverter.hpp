@@ -1,6 +1,6 @@
 
-#ifndef CURRENT_SAMPLING_FUNCTIONALITY_HPP
-#define CURRENT_SAMPLING_FUNCTIONALITY_HPP
+#ifndef ADC_TO_AMPCONVERTER_HPP
+#define ADC_TO_AMPCONVERTER_HPP
 #include <iostream>
 #include <cmath>
 using namespace std;
